@@ -1,0 +1,11 @@
+name: Real Estate Theme
+type: theme
+description: Custom theme mabe from a youtube video
+core_version_requirement: ^8 || ^9
+base theme: classy
+libraries:
+  - realestate/realestate-style
+
+regions:
+  menu: menu
+  content: content

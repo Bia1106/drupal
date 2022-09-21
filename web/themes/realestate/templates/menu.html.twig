@@ -1,0 +1,5 @@
+<ul class="nav navbar-nav pull-right mainNav">
+{% for item in items %}
+<li>{{ link(item.title, item.url) }}</li> 
+{% endfor %}
+</ul>

@@ -1,0 +1,23 @@
+realestate-style:
+  css:
+    theme:
+      assets/css/bootstrap.min.css: {}
+      assets/css/font-awesome.min.css: {}
+      assets/css/bootstrap-theme.css: {}
+      assets/css/style.css: {}
+      assets/css/camera.css: {}
+
+  js:
+    assets/js/modernizr-latest.js: {}
+    assets/js/jquery.min.js: {}
+    assets/js/fancybox/jquery.fancybox.pack.js: {}
+    assets/js/jquery.mobile.customized.min.js: {}
+    assets/js/jquery.easing.1.3.js: {}
+    assets/js/camera.min.js: {}
+    assets/js/bootstrap.min.js: {}
+    assets/js/custom.js: {}
+
+
+  dependencies:
+    - core/jquery
+    - core/jquery.once
