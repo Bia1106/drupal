@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: pt-br
+uuid: 48837e50-1cbc-4141-9edc-08e32463f090
+name: 'Projeto Drupal'
+mail: beatrizadeodato@criasol.com.br
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: ''

@@ -1,0 +1,10 @@
+uuid: cdf17835-6959-4863-9795-8c039a62aa76
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.token
+label: Token
+targetEntityType: file
+cache: true

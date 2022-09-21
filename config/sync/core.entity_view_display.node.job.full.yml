@@ -1,0 +1,47 @@
+uuid: baeb0258-c3ce-40ea-afbe-97f40e8c3091
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.job.body
+    - field.field.node.job.field_contact_email
+    - field.field.node.job.field_salary_range
+    - node.type.job
+  module:
+    - text
+    - user
+id: node.job.full
+targetEntityType: node
+bundle: job
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_contact_email:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_salary_range:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true

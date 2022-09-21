@@ -1,0 +1,17 @@
+uuid: 1324d27b-8bed-4ce3-9e08-68a2c08863d5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Vaga
+type: job
+description: 'Publique uma vaga'
+help: 'Se eu quiser orientar sobre como preencher este formulário o lugar é aqui'
+new_revision: true
+preview_mode: 1
+display_submitted: true

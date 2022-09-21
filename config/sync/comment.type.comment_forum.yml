@@ -1,0 +1,13 @@
+uuid: 6d50ad66-b4b7-4f2a-b4e9-c8bd60b50dd0
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - forum
+_core:
+  default_config_hash: ASMYOUZX4c3xSgNTeKYhnhde-J9Zq899Z-gV2emoyr8
+id: comment_forum
+label: Comment_forum
+target_entity_type_id: node
+description: 'Default comment field'

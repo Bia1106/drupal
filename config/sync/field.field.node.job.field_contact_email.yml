@@ -1,0 +1,19 @@
+uuid: f14d6262-718f-4d62-8c0f-71322fa8b83e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.job
+id: node.job.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: job
+label: 'Email de contato'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

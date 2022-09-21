@@ -1,0 +1,10 @@
+uuid: bd5b9f30-1e64-4f27-8561-fb421675ed42
+langcode: pt-br
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
+id: comment
+label: 'Comentários padrão'
+target_entity_type_id: node
+description: 'Permite comentar no conteúdo'

@@ -1,0 +1,22 @@
+uuid: b32b5ec5-d3e9-49c6-b0a3-24b3a4d6e4f6
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node.article.promote
+field_name: promote
+entity_type: node
+bundle: article
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

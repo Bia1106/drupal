@@ -1,0 +1,44 @@
+uuid: 12a7a268-9539-4693-abd8-b37040635b3d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+    - field.field.user.user.field_about
+    - field.field.user.user.user_picture
+    - image.style.large
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content:
+  field_about:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

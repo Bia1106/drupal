@@ -1,0 +1,20 @@
+uuid: d9a6c405-3a85-473e-a5ab-bbb5214b895c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - path
+id: node.page.path
+field_name: path
+entity_type: node
+bundle: page
+label: 'Apelido de URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

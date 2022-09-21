@@ -1,0 +1,4 @@
+label: Container
+settings:
+  on_label: Sim
+  off_label: Não
