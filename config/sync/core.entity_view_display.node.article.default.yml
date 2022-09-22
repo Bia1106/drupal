@@ -57,7 +57,7 @@ content:
     region: content
   field_image:
     type: image
-    label: hidden
+    label: visually_hidden
     settings:
       image_link: ''
       image_style: wide

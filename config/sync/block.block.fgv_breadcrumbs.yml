@@ -1,0 +1,22 @@
+uuid: d19964ba-bf7d-4e0a-95af-b41c9d007e0d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fgv
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: fgv_breadcrumbs
+theme: fgv
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

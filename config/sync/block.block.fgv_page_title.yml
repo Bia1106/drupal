@@ -1,0 +1,20 @@
+uuid: 04eebfee-6baa-4f66-b18d-38b2a230681b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - fgv
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: fgv_page_title
+theme: fgv
+region: sidebar_first
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

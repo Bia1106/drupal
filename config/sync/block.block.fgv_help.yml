@@ -1,0 +1,22 @@
+uuid: ceca7868-62a8-499f-9f12-b0b8bea78a05
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - fgv
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: fgv_help
+theme: fgv
+region: sidebar_first
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

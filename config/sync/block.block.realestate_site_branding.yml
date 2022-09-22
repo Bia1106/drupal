@@ -1,0 +1,25 @@
+uuid: 2f0db3da-0e07-4ebd-b2e5-405c5fbab6d7
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - realestate
+_core:
+  default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
+id: realestate_site_branding
+theme: realestate
+region: menu
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

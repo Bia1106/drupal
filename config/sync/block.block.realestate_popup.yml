@@ -1,0 +1,36 @@
+uuid: 64d62087-0ad1-419b-9756-a11416078caa
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:63d853ec-ff64-4ead-9feb-855cf5bf6295'
+  module:
+    - block_content
+    - node
+  theme:
+    - realestate
+id: realestate_popup
+theme: realestate
+region: menu
+weight: 0
+provider: null
+plugin: 'block_content:63d853ec-ff64-4ead-9feb-855cf5bf6295'
+settings:
+  id: 'block_content:63d853ec-ff64-4ead-9feb-855cf5bf6295'
+  label: POPUP
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      forum: forum
+      job: job
+      page: page

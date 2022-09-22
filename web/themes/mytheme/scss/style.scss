@@ -1,6 +1,59 @@
 //default variables
 @import "fonts";
 @import "default-variables";
-// bootstrap framework
 
-@import '../bootstrap/assest/stylesheets/bootstrap';
+/*!
+ * Bootstrap v3.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/normalize";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/print";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/scaffolding";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/type";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/code";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/grid";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/tables";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/forms";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/component-animations";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/dropdowns";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/button-groups";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/input-groups";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/navs";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/navbar";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/breadcrumbs";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/pagination";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/pager";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/labels";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/badges";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/jumbotron";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/thumbnails";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/alerts";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/progress-bars";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/media";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/list-group";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/panels";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/responsive-embed";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/wells";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/modals";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/tooltip";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/popovers";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/utilities";
+@import "../bootstrap/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/responsive-utilities";

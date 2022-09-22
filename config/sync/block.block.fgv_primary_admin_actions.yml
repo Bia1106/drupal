@@ -1,0 +1,20 @@
+uuid: 079dadcd-3f64-4285-bd2c-af1b52b2c8ac
+langcode: en
+status: true
+dependencies:
+  theme:
+    - fgv
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: fgv_primary_admin_actions
+theme: fgv
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: b20986ac-a3b9-467a-b050-90938cacf127
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+  theme:
+    - realestate
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: realestate_syndicate
+theme: realestate
+region: menu
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

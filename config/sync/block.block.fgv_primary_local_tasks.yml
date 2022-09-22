@@ -1,0 +1,22 @@
+uuid: 5915a04d-0492-4495-ae36-1396b1cbc8c1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - fgv
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: fgv_primary_local_tasks
+theme: fgv
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
