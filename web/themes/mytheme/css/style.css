@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700;900");
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
@@ -1070,7 +1071,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Exo", sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -5268,7 +5269,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Exo", sans-serif;;
   font-style: normal;
   font-weight: 400;
   line-height: 1.428571429;
@@ -5782,5 +5783,38 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+header {
+  background-color: white !important;
+  transition: background-color 0.5s ease;
+  border: 0 !important; }
+  @media (min-width: 768px) {
+    header .navbar-nav {
+      float: right; } }
+  header .menu li {
+    border-top: 0 solid transparent; }
+    header .menu li > a {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #d2001e !important;
+      padding: 0;
+      margin: 0 25px 25px 25px;
+      background-color: transparent !important; }
+    header .menu li:before {
+      display: block;
+      content: '';
+      border-top: solid 4px #d2001e;
+      transform: scaleX(0);
+      transition: transform 250ms ease-in-out;
+      padding-bottom: 21px; }
+    header .menu li:hover:before {
+      transform: scaleX(1); }
+    header .menu li.is-active {
+      background-color: transparent !important; }
+      header .menu li.is-active:before {
+        display: block;
+        content: '';
+        border-top: solid 4px #d2001e;
+        transform: scaleX(1); }
 
 /*# sourceMappingURL=style.css.map */

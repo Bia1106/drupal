@@ -12,7 +12,7 @@ dependencies:
 id: mytheme_popup
 theme: mytheme
 region: navigation
-weight: 0
+weight: -3
 provider: null
 plugin: 'block_content:63d853ec-ff64-4ead-9feb-855cf5bf6295'
 settings:

@@ -4,7 +4,7 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 
 name: 'My theme'
-description: 'A Drupal Bootstrap 3 based sub-theme.'
+description: 'Theme created by Bia'
 package: 'Bootstrap'
 
 regions:

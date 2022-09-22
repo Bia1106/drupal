@@ -305,6 +305,7 @@ display:
     display_plugin: page
     position: 1
     display_options:
+      title: ''
       style:
         type: grid
         options:
@@ -321,6 +322,7 @@ display:
         options:
           view_mode: teaser
       defaults:
+        title: false
         style: false
         row: false
         header: false
