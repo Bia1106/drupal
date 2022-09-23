@@ -6,3 +6,18 @@
  *
  * Place your custom PHP code in this file.
  */
+function mytheme_preprocess_field(&$variables) {
+  // working on first block of the website
+  if (isset($variables['field_name']) == 'field_first_block') {
+    /**
+     * @var  \Drupal\paragraph\Entity\Paragraph $paragraph
+     */
+    // $paragraph = $variables['items'][0]['content']['#paragraph'];
+    $variables['mytheme'] = [
+      // 'title' => '',
+      // 'subtitle' => '',
+      'title' => $paragraph->get('field_title')->getValue()[0]['value'],
+      // 'subtitle' => $paragraph->get('field_subtitle'),
+    ];
+  }
+}
