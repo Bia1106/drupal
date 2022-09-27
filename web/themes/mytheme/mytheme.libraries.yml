@@ -16,8 +16,8 @@ framework:
    bootstrap/bootstrap-sass-3.4.1/assets/javascripts/bootstrap/tab.js: {}
    bootstrap/bootstrap-sass-3.4.1/assets/javascripts/bootstrap/transition.js: {}
    js/start.js: {}
-
-# Uncomment for LESS source JavaScript files.
+  dependencies:
+    - core/js
 #  js:
 #    bootstrap/js/affix.js: {}
 #    bootstrap/js/alert.js: {}
