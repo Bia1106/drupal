@@ -1,0 +1,62 @@
+<?php 
+
+/**
+ * Implements hook_preprocess_page()
+ * */
+
+function fgv_preprocess_page(&$variables) {
+    // MENU
+    $variables['link_meusbeneficios'] = theme_get_setting('link_meusbeneficios');
+    
+    // POPUP
+    $variables['imagem_popup'] = theme_get_setting('imagem_popup');
+
+
+    //CABEÇALHO
+    $variables['logotipo'] = theme_get_setting('logotipo');
+    $variables['email_contato'] = theme_get_setting('email_contato');
+    $variables['email_icone'] = theme_get_setting('email_icone');
+    
+    // HERO
+    $variables['hero_titulo'] = theme_get_setting('hero_titulo');
+    $variables['hero_fundo'] = theme_get_setting('hero_fundo');
+    $variables['hero_boasvindas'] = theme_get_setting('hero_boasvindas')['value'];
+    
+    // OBJETIVOS
+    foreach( range(1,4) as $obj ) {
+        $variables['obj' . $obj . '_icone'] = theme_get_setting('obj' . $obj . '_icone');
+        $variables['obj' . $obj . '_descricao'] = theme_get_setting('obj' . $obj . '_descricao');
+    }
+    
+    // VÍDEO
+    $variables['video_legenda'] = theme_get_setting('video_legenda');
+    $variables['url_video'] = theme_get_setting('url_video');
+     $variables['url_thumb'] = theme_get_setting('url_thumb');
+    
+    // BALANÇO DE PAGAMENTOS
+    $variables['balanco_titulo'] = theme_get_setting('balanco_titulo');
+    $variables['balanco_subtitulo'] = theme_get_setting('balanco_subtitulo');
+    $variables['balanco_fundo'] = theme_get_setting('balanco_fundo');
+    $variables['dado1_numero'] = theme_get_setting('dado1_numero');
+    $variables['dado1_descricao'] = theme_get_setting('dado1_descricao');
+    $variables['dado2_numero'] = theme_get_setting('dado2_numero');
+    $variables['dado2_descricao'] = theme_get_setting('dado2_descricao');
+    
+    // DÚVIDAS
+    $variables['faq_titulo'] = theme_get_setting('faq_titulo');
+    $variables['faq_descricao'] = theme_get_setting('faq_descricao');
+    
+    // FAQ
+    foreach( range(1,12)  as $num) {
+
+    $variables['faq_pergunta_' . $num] = theme_get_setting('faq_pergunta_' . $num);
+    $variables['faq_resposta_' . $num] = theme_get_setting('faq_resposta_' . $num);
+
+  }
+}
+
+function fgv_preprocess_paragraph(&$variables){
+   $node = \Drupal::request()->attributes->get('node');
+   $variables['nodetitle'] = print_r($node);
+}
+

@@ -1,0 +1,7 @@
+fgv-css-js:
+  css:
+    theme:
+      assets/style.css: {}
+  js:
+    theme:
+      assets/script.js: {}

@@ -1,0 +1,231 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Montserrat',sans-serif;
+}
+
+.content {
+    display: none;
+}
+
+.views-row:last-child .content {
+    display: block;
+}
+
+body {
+    background:#fff;
+}
+
+.container {
+    max-width: 1349px;
+    margin: 0 auto;
+}
+
+#header > img {
+    display: block;
+    margin: 1em;
+}
+
+#header {
+    background-color: #E8EBE8;
+    padding: 1em;
+}
+
+.main-content {
+    padding: 2rem 0;
+}
+
+.main-content h2 {
+   font-size: 1.6rem;   
+}
+
+.main-content p {
+    font-size: 1rem;
+    color: #686868;
+    line-height: 1.4;
+}
+
+.main-content .header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.main-content .orientacao {
+    padding-top: 2rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.main-content .orientacao h3 {
+    font-size: 1.3rem;
+    color:#88BBCC;
+}   
+
+.main-content .orientacao p {
+    font-size: .9rem;
+}
+
+
+.leia-mais { display: none; }
+
+[role=alert] ul {
+    background-color: #fef5f1;
+    color: #8c2e0b;
+    padding: 1rem;
+    background-image: url(https://portal.fgv.br/misc/message-24-error.png);
+    background-repeat: no-repeat;
+    background-position: 16px 16px;
+}
+
+[role=alert] ul li {
+    margin-left: 3rem;
+    list-style: none;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+}
+
+input,textarea {
+        border-radius: 50px;
+    font-size: 15px;
+    padding: 10px 38px 10px 20px !important;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+input, select, texarea {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    background-color: #008FD0;
+    border-color: #008FD0;
+    float: right;
+    font-size: 14px;
+    padding: 0 45px;
+    cursor: pointer;
+    width: 200px;
+}
+
+input[type=submit]:hover {
+    background-color: #0673A5;
+    border-color: #0673A5;
+}
+
+form label {
+    color: #555;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+form label::after {
+    content: '*';
+    color: red;
+    margin-left: 0.3rem;
+}
+.views-row:last-child .content span {
+    display: none;
+}
+
+.main-content .orientacao form input[type=submit],
+.main-content .orientacao{
+    text-align: center;
+}
+
+.main-content .orientacao form * {
+    text-align: left;
+}
+
+.orientacao div p:first-child {
+    font-weight: 500;
+    font-size: .85rem;
+    color:#000;
+    margin-bottom: 3rem;
+}
+
+.views-row:last-child .content span.text-count {
+    display: inline-block;
+}
+
+.orientacao div p:first-child { display:none; }
+</style>
+<div id="page">
+    <div id="top-menu">
+	<a id="meus-beneficios" target="_blank" href="{{ link_meusbeneficios }}">
+					<img src="https://www18.fgv.br/ptr/assets/meus-beneficios.png" alt="">
+					<span>Meus Benefícios</span>
+				</a>
+				<a href="/">Início</a>
+				<a href="/#ultimas-noticias">Notícias</a>
+				<a href="/#objetivos-do-prt">Objetivos</a>
+				<a href="/#balanco-de-pagamentos">Balanço Pagamentos</a>
+				<a href="/#tire-suas-duvidas">Dúvidas</a>
+				<a href="/fale-conosco">Fale Conosco</a>
+				<a href="/ouvidoria">Ouvidoria</a>
+			</div>
+    <div id="header">
+        <img src="{{ logotipo }}" alt="Fundação Getúlio Vargas">
+    </div>
+
+<section class="main-content">
+    <div class="center-content">
+        <div class="header">
+            <h2>BEM-VINDO(a)</h2>
+            <p>
+                Bem-vindo (a) à Ouvidoria do Programa de Transferência de Renda. A Fundação Getulio Vargas (FGV) é a
+                responsável pela gestão dos cadastros e pagamentos do PTR e tem o compromisso de manter uma relação de
+                transparência e diálogo com os atingidos e atingidas e sociedade civil.
+                O orgulho de integrar a comunidade FGV, de compartilhar a sua missão, visão e valores, de fazer parte de
+                suas conquistas e de contribuir para o alcance de seus objetivos futuros implica na responsabilidade de
+                pautar nossa conduta na legalidade e nos mais elevados padrões éticos em todas as interações sejam elas
+                internas à FGV ou naquelas realizadas em seu nome.
+                Este Canal é um recurso seguro e confidencial onde você pode manifestar suas sugestões, elogios,
+                reclamações, denúncias e perspectivas sobre os serviços prestados pelo Programa de Transferência de Renda - PTR.
+            </p>
+        </div>
+        
+        <div class="orientacao">
+            <h3>SOLICITAR ORIENTAÇÃO</h3>
+            <p>Utilize esse espaço para manifestar sugestões, elogios, reclamações, denúncias entre outros,
+            sobre os serviços prestados.
+            Toda e qualquer manifestação aqui registrada será apurada dentro da estrita confidencialidade.
+            Aquelas realizadas de boa-fé e que apresentarem uma base fundamentada serão analisadas e as
+            ações decorrentes serão tomadas a critério exclusivo da Coordenação do PTR.
+            Ao fazer uso da Ouvidoria do PTR, você se disponibiliza a ser contatado ou contatada para
+            melhor entendimento e fundamentação do fato ocorrido.
+            A veracidade das informações relatadas é de sua inteira responsabilidade.</p>
+            
+            {{ page.content }}
+        </div>
+    </div>
+    
+    <div class="faq" style="margin-top:7rem;">
+        <div class="center-content">
+            <h2>O que é Ouvidoria?</h2>
+        <p>Ouvidoria é um espaço para comunicação entre o atingido ou atingida e o Programa de
+Transferência de Renda - PTR. Por meio da Ouvidoria, o atingido ou atingida pode registrar
+manifestações por meio de reclamações, denúncias, elogios, sugestões ou,
+denúncias,solicitações ou realizar pedidos de informação sobre os serviços relacionados ao
+PTR.
+Como entrar em contato com a Ouvidoria?
+Contato 24 horas através do site www.fgv.br/ptr
+Como funciona o atendimento?
+Após receber o registro, a Ouvidoria do PTR encaminha a solicitação para a o setor
+responsável pela análise das manifestações. O solicitante recebe o número de protocolo para
+acompanhamento. Após a resposta do setor responsável, a Ouvidoria irá procurar o
+solicitante para esclarecer a questão.</p>
+        </div>
+    </div>
+</section>
+
+				<div id="footer" class="center-content">
+					<img src="{{ logotipo }}" alt="Fundação Getúlio Vargas">
+				</div>
+</div>

@@ -1,0 +1,6 @@
+{% if mytheme.font_color %}
+  {% set font_color = 'style=color:#' ~ mytheme.font_color %}
+{% endif %}
+<div class="component-button">
+  <a class="button btn {{ mytheme.model }} {{ mytheme.size }} {{ mytheme.css }}" href="{{ mytheme.url }}" {{ font_color }}>{{ mytheme.title }}</a>
+</div>
