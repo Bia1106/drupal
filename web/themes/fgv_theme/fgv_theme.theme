@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function fgv_theme_preprocess(&$variables, $hook)
+{
+    $variables['base_path'] = base_path();
+}

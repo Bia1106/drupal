@@ -1,0 +1,31 @@
+baseline:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/icon?family=Material+Icons: { type: external }
+outlined:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/icon?family=Material+Icons+Outlined: { type: external }
+two-tone:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/icon?family=Material+Icons+Two+Tone: { type: external }
+round:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/icon?family=Material+Icons+Round: { type: external }
+sharp:
+  version: VERSION
+  css:
+    theme:
+      //fonts.googleapis.com/icon?family=Material+Icons+Sharp: { type: external }
+
+dialog:
+  version: VERSION
+  css:
+    component:
+      css/dialog.css: { }

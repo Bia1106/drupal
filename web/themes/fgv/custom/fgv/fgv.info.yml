@@ -1,9 +1,0 @@
-name: FGV
-type: theme
-description: Tema desenvolvido pela agência Mangu para PROGRAMA DE TRANSFERÊNCIA DE RENDA da Fundação Getúlio Vargas
-core_version_requirement: ^8 || ^9
-
-base theme: stable
-libraries:
-  - fgv/fgv-css-js
- 

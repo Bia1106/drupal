@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGV PTR</title>
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+  <!--menu desktop start-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="desktop-only container-fluid">
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar5" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="collapse navbar-collapse" id="navbar5" href="index.html">
+        <img class="d-block img-fluid" src="img/logo-fgv.svg" height="30px"></a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O Projeto</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Histórico do projeto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Governança</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Glossário</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Quem somos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Notícias</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Galeria de fotos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Galeria de vídeos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cursos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Publicações</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Transparência</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Agenda</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentos</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Documentos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Formulários</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Glossários</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Contato</a>
+        </li>
+      </ul>
+      <a class="btn navbar-btn ml-md-2 btn btn-yellow text-dark btn-warning" href="#">Área do Beneficiário</a>
+      <div class="dropdown">
+        <button class="btn dropleft" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-search text-dark"></i></button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="">
+          <div class="input-group">
+            <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning btn-lg" type="button"><i class="bi bi-search text-dark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="close-menu mobile-only" data-toggle="collapse" data-target="#navbar5" style=""> x </button>
+    </div>
+    <!-- menu desktop end-->
+    <!--menu mobile start -->
+    <div class="container mobile-only menu-mobile">
+      <div class="d-flex flex-row w-100 align-items-center justify-content-between"><img class="d-block" src="img/logo-fgv.svg" height="50px">
+        <div class="text-center">
+          <button class="navbar-toggler navbar-toggler-right border-0 border-right" type="button" style="" onclick="document.getElementById('menu-body').classList.toggle('open')">
+            <i class="bi bi-list text-dark"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-right border-0 mt-1" type="button" style="" data-target="#buscar-por" data-toggle="modal">
+            <i class="bi bi-search text-dark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="menu" id="menu-body">
+        <div class="holder p-3">
+          <div>
+            <ul class="navbar-nav">
+              <img class="img-fluid d-block mt-2 mb-4" src="img/logo-branca-mobile.png" width="180">
+              <li class="nav-item text-dark py-1">
+                <a href="#" class="nav-link active text-white">Home</a>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O Projeto</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Histórico do projeto</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Governança</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Glossário</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Quem somos</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Notícias</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Galeria de fotos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Galeria de vídeos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Cursos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Publicações</a>
+                </div>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Transparência</a>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Agenda</a>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentos</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Documentos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Formulários</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Glossários</a>
+                </div>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="borda">
+          <button class="close-menu" onclick="document.getElementById('menu-body').classList.toggle('open')"> <i class="bi bi-x-circle"></i> </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--menu end-->
+  <div style="background-image: url(&quot;img/bg-home.svg&quot;), linear-gradient(to left, rgb(17, 161, 234), rgb(34, 68, 255));	background-position: top left, top left;	background-size: 100%, 100%;	background-repeat: repeat, repeat;" class="bg-primary">
+    <div class="carousel slide shadow-none carousel-fade" data-ride="carousel" id="carousel" data-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="banner-rotativo d-flex flex-row justify-content-center align-items-center" style="	background-image: url(img/foto-banner1.png);	background-position: center;	background-size: cover;	background-repeat: no-repeat;">
+            <div class="py-5 container d-flex flex-row align-items-center justify-content-center" style="	min-height: 620px;">
+              <div class="row d-flex flex-row align-items-center justify-content-start mx-auto">
+                <div class="px-md-5 d-flex flex-column align-items-start justify-content-start text-left col-lg-8" style="">
+                  <h1 class="text-light pb-2">Programa de Transferência de Renda Teste 2</h1>
+                  <p class="text-light">Nela você irá encontrar informações sobre o PTR, pagamentos já realizados e as próximas fases de implantação do programa.</p><a class="btn btn-yellow py-2 btn-warning" href="#">Área do Beneficiário</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="banner-rotativo d-flex flex-row justify-content-center align-items-center" style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(img/img-noticia.png);	background-position: top left, center;	background-size: 100%, cover;	background-repeat: repeat, no-repeat;">
+            <div class="py-5 container d-flex flex-row align-items-center justify-content-center" style="	min-height: 620px;">
+              <div class="row d-flex flex-row align-items-center justify-content-start mx-auto">
+                <div class="px-md-5 d-flex flex-column align-items-start justify-content-start text-left col-lg-8" style="">
+                  <h1 class="text-light pb-2">Programa de Transferência de Renda</h1>
+                  <p class="text-light">Nela você irá encontrar informações sobre o PTR, pagamentos já realizados e as próximas fases de implantação do programa.</p><a class="btn btn-warning" href="#">Área do Beneficiário</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <a class="carousel-control-prev p-4" href="#carousel" role="button" data-slide="prev" style="	background-image: linear-gradient(to bottom, rgba(77, 78, 86, 0.5), rgba(77, 78, 86, 0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;"> <span class="bi bi-arrow-left"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next p-4" href="#carousel" role="button" data-slide="next" style="	background-image: linear-gradient(to bottom, rgba(77, 78, 86, 0.5), rgba(77, 78, 86, 0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;"> <span class="bi bi-arrow-right "></span> <span class="sr-only">Next</span> </a>
+    </div>
+  </div>
+  <div class="d-none d-sm-block pt-5" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-6">
+          <h2 class="text-dark" id="proximas-paradas"><span style="font-weight: normal;">Últimas notícias</span></h2>
+        </div>
+        <div class="d-flex justify-content-end align-items-center col-md-5 col-6" style=""><a class="btn btn-yellow py-2 btn-warning text-dark" href="agenda.html">Ver todas notícias</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none pt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-dark text-center mb-0" id="proximas-paradas">Últimas notícias</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-nonept-3 py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 mt-2" style="">
+          <div class="card"> <img class="card-img-top" src="img/foto1-noticia.png" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-primary"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+              <h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column justify-content-between align-items-stretch col-lg-6">
+          <div class="card mt-2">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 px-0 col-12">
+                  <div class="row mx-1">
+                    <div class="col-8 col-lg-9 col-md-9" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-primary"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
+                    </div>
+                    <div class="px-0 col-4 col-lg-3 col-md-3"><img class="img-fluid d-block float-right" src="img/foto1.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-2">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 px-0 col-12">
+                  <div class="row mx-1">
+                    <div class="col-8 col-lg-9 col-md-9" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-primary"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
+                    </div>
+                    <div class="px-0 col-4 col-lg-3 col-md-3"><img class="img-fluid d-block float-right" src="img/foto1.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mt-2">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 px-0 col-12">
+                  <div class="row mx-1">
+                    <div class="col-8 col-lg-9 col-md-9" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-primary"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
+                    </div>
+                    <div class="px-0 col-4 col-lg-3 col-md-3"><img class="img-fluid d-block float-right" src="img/foto1.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- seção apenas no mobile -->
+  <div class="d-block d-sm-none mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 justify-content-center align-items-center flex-row d-flex"><a class="btn btn-yellow py-2" href="agenda.html">Ver todas notícias</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- seção apenas no mobile -->
+  <div class="d-none d-sm-block pt-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-6" style="">
+          <h2 class="text-dark"><span style="font-weight: normal;">Últimas notícias</span></h2>
+        </div>
+        <div class="d-flex justify-content-end align-items-center col-md-5 col-6" style=""><a class="btn btn-yellow py-2 btn-warning text-dark" href="agenda.html">Ver agenda completa</a></div>
+      </div>
+    </div>
+  </div>
+  <!-- seção apenas no mobile -->
+  <div class="d-block d-sm-none pt-3 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-dark text-center mb-0" id="proximas-paradas">Agenda</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- seção apenas no mobile -->
+  <div class="pt-4 bg-light" style="">
+    <div class="container">
+      <div class="row">
+        <div class="card-group col-lg-6">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group col-lg-6">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas, Mario Campos, Balneário Reino dos Lagos, Esmeraldas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-group col-lg-6">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas, Mario Campos, Balneário Reino dos Lagos, Esmeraldas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group col-lg-6">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas, Mario Campos, Balneário Reino dos Lagos, Esmeraldas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card-group col-lg-6" style="">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group col-lg-6" style="">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas, Mario Campos, Balneário Reino dos Lagos, Esmeraldas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-4">
+        <div class="card-group col-lg-6">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas, Mario Campos, Balneário Reino dos Lagos, Esmeraldas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-group col-lg-6">
+          <div class="card mb-3">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0" style="">
+                  <div class="row mx-1 d-flex justify-content-center">
+                    <div class="col-lg-2 justify-content-center align-items-center col-sm-12 col-2 col-md-6 d-flex flex-column" style="">
+                      <h4 class="text-center text-dark mt-2 mb-0">OUT<br></h4>
+                      <h3 class="text-center text-dark"><span style="font-weight: normal;">31</span></h3>
+                    </div>
+                    <div class="col-lg-10 col-sm-12 col-md-6 col-10" style="">
+                      <h5 class="text-dark mt-2">São Joaquim de Bicas</h5>
+                      <h6 class="text-primary"><a href="#">Mais informações</a></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- seção apenas no mobile start -->
+    <div class="d-block d-sm-none bg-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 justify-content-center align-items-center flex-row d-flex pb-3 bg-light"><a class="btn py-2 btn-warning" href="agenda.html">Ver toda agenda completa</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- seção apenas no mobile end -->
+    <div class="py-5 bg-dark" style="	background-image: url(img/banner2-foto.png);	background-position: center;	background-size: cover;	background-repeat: no-repeat;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 pb-5">
+            <h2 class="text-white">Balanço de <br>pagamentos</h2>
+            <p class="mb-3 text-white">Veja o que foi feito no mês de julho</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-5 bg-light">
+    <div class="container sobreposicao">
+      <div class="row">
+        <div class="px-0 col-lg-12 col-12">
+          <div class="card-deck">
+            <div class="card bg-primary mb-0 border-0">
+              <div class="card-body p-4">
+                <h1 class="text-white text-center mb-0 pt-4">101.912</h1>
+                <h6 class="text-white text-center mb-0 pb-4"><span style="font-weight: normal;">Pagamentos efetuados</span></h6>
+              </div>
+            </div>
+            <div class="card bg-dark mb-0 border-0">
+              <div class="card-body p-4">
+                <h1 class="text-white text-center mb-0 pt-4">R$ 62,2</h1>
+                <h6 class="text-white text-center mb-0 pb-4"><span style="font-weight: normal;">Milhões pagos em benefícios</span></h6>
+              </div>
+            </div>
+            <div class="card bg-secondary border-0">
+              <div class="card-body p-4">
+                <h1 class="text-dark text-center mb-0 pt-4">101.912</h1>
+                <h6 class="text-dark text-center mb-0 pb-4"><span style="font-weight: normal;">Pagamentos efetuados</span></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-info py-5" style="background-image: url(&quot;img/bg-1.png&quot;); background-position: left top; background-size: 100%; background-repeat: repeat;">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-7 col-6" style="">
+          <h2 class="text-dark"><span style="font-weight: normal;">Dados do projeto por região:</span></h2>
+        </div>
+        <div class="d-flex justify-content-end align-items-center col-md-5 col-6"><a class="btn btn-yellow py-2 btn-warning text-dark" href="agenda.html">Acessar transparência</a></div>
+      </div>
+      <div class="row mx-auto">
+        <div class="px-0 col-lg-12" style="">
+          <div class="carousel slide carousel-fade mx-auto" data-ride="carousel" id="carousel-dados" data-interval="5000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row mx-auto">
+                  <div class="px-0 col-lg-8"><img class="d-block img-fluid" src="img/grafico.png" style=""></div>
+                  <div class="d-flex flex-row justify-content-center align-items-center bg-light col-md-4 col-lg-4 p-3">
+                    <h3 class="text-left text-dark"><span style="font-weight: normal;">Aqui será cadastrado via admin o contexto do gráfico1</span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row mx-auto">
+                  <div class="px-0 col-lg-8"><img class="d-block img-fluid" src="img/grafico.png"></div>
+                  <div class="d-flex flex-row justify-content-center align-items-center bg-light col-lg-4 p-3">
+                    <h3 class="text-left text-dark"><span style="font-weight: normal;">Aqui será cadastrado via admin o contexto do gráfico2</span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row mx-auto">
+                  <div class="px-0 col-lg-8"><img class="d-block img-fluid" src="img/grafico.png"></div>
+                  <div class="d-flex flex-row justify-content-center align-items-center bg-light col-lg-4 p-3">
+                    <h3 class="text-left text-dark"><span style="font-weight: normal;">Aqui será cadastrado via admin o contexto do gráfico3</span></h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-lg-3 justify-content-end align-items-end d-flex flex-row mt-2" style="">
+          <a class="carousel-control-prev-dados d-flex align-items-end justify-content-end mr-1" href="#carousel-dados" data-slide="prev" role="button"> <span class="bi bi-arrow-left p-3 bg-yellow"></span> <span class="sr-only ">Previous</span> </a>
+          <a class="carousel-control-prev-dados d-flex align-items-end justify-content-end" href="#carousel-dados" role="button" data-slide="next"> <span class="bi bi-arrow-right bi-2x p-3 bg-yellow"></span> <span class="sr-only">Next</span> </a> </div>
+      </div>
+    </div>
+  </div>
+  <!-- seção apenas no mobile start -->
+  <div class="d-block d-sm-none py-4" style="background-image: linear-gradient(rgb(12, 99, 170), rgb(12, 99, 170)); background-position: left top; background-size: 100%; background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 my-2" style="">
+          <h3 class="text-white text-center">Se você tem alguma dúvida</h3>
+          <h2 class="text-white text-center">Estamos aqui para te ajudar</h2>
+          <div class="row">
+            <div class="col-md-12 d-flex flex-row justify-content-center mt-3"><a class="btn btn-yellow py-2 text-dark" href="agenda.html">Ver toda agenda completa</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none py-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-white text-center mb-3"><a href="#">Termos de uso</a></h5>
+          <h5 class="text-white text-center mb-3"><a href="#">Política de privacidade</a></h5>
+          <h5 class="text-white text-center mb-3"><a href="#">Quem Somos</a></h5>
+          <h5 class="text-white text-center"><a href="#">Contato</a></h5>
+        </div>
+        <div class="col-md-4 d-flex flex-row justify-content-center pt-2"><img class="img-fluid d-block" src="img/logo-fgv.svg" width="200"></div>
+        <div class="col-md-4">
+          <h6 class="text-text-color text-center mt-2">Copyright © FGV PTR</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- seção apenas no mobile end -->
+  <div class="d-block d-sm-none bg-info" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-4">
+    <div class="container">
+      <div class="row mx-auto">
+        <div class="text-center bg-primary col-12 col-lg-8 p-4 pl-5">
+          <h4 class="text-left text-white mb-0"><span style="font-weight: normal;">Se você ainda tem alguma dúvida </span></h4>
+          <h2 class="text-left text-white mb-0">Estamos aqui para te ajudar </h2>
+        </div>
+        <div class="text-center bg-primary col-lg-4 d-flex flex-row justify-content-center align-items-center col-12 p-4"><a class="btn btn-yellow py-2 btn-warning text-dark" href="#">Entre em contato</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-3 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-5" style=""><img class="d-block img-fluid" src="img/logo-fgv.svg" width="180"></div>
+        <div class="col-md-6 col-lg-7" style="">
+          <ul class="nav d-flex justify-content-end">
+            <li class="nav-item"> <a class="nav-link active" href="#">Termos de uso</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Política de privacidade</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Quem Somos</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Contato</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-3 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center d-md-flex align-items-center justify-content-between" style="">
+          <p class="mb-0 py-1">Copyright © FGV PTR</p>
+        </div>
+        <div class="col-md-6 d-flex flex-row justify-content-end" style=""><a class="btn btn-link text-muted" href="#" style="color:#0976b4" target="_blank" id="navbr5">Topo do site<i class="bi bi-caret-up-fill ml-2"></i></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="buscar-por">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning btn-lg" type="button"><i class="bi bi-search text-dark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

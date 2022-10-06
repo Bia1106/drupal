@@ -28,11 +28,14 @@
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
         "drupal/ctools": "^4.0",
+        "drupal/grid_view_bootstrap": "^8.0",
         "drupal/jquery_ui": "^1.4",
+        "drupal/material_icons": "^1.0",
         "drupal/module_filter": "^3.2",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
         "drupal/token": "^1.11",
+        "drupal/views_layout": "^1.2",
         "drush/drush": "^11.1"
     },
     "conflict": {

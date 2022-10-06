@@ -22,16 +22,6 @@ function mytheme_preprocess_field(&$variables) {
     $paragraph = $variables['items'][0]['content']['#paragraph'];
     $btn_paragraph = Paragraph::load($paragraph->get('field_button')->getValue()[0]['target_id']);
 
-//    try {
-//      $file_id = $paragraph->get('field_side_image')->getValue()[0]['target_id'];
-//      $file = File::load($file_id);
-//      $img_url = Util::getStylizedImageUrl($file, Util::getFieldSettings('paragraph', 'first_block','default', 'field_side_image')['image_style']);
-//    }
-//    catch (InvalidPluginDefinitionException $e) {
-//    }
-//    catch (PluginNotFoundException $e) {
-//    }
-
     $uri = $paragraph->get('field_side_image')->entity->getFileUri();
     /** @noinspection PhpDeprecationInspection */
     $url = file_create_url($uri);
@@ -65,3 +55,4 @@ function mytheme_preprocess_paragraph(&$variables) {
   }
 
 }
+

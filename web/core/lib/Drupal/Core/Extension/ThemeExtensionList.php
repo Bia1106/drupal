@@ -46,7 +46,7 @@ class ThemeExtensionList extends ExtensionList {
       'comment_user_picture',
       'comment_user_verification',
     ],
-    'screenshot' => 'screenshot2.png',
+    'screenshot' => 'screenshot.png',
     'version' => NULL,
     'php' => \Drupal::MINIMUM_PHP,
     'libraries' => [],

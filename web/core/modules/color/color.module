@@ -644,7 +644,7 @@ function _color_render_images($theme, &$info, &$paths, $palette) {
     $image = $file_system->realpath($paths['target'] . $base);
 
     // Cut out slice.
-    if ($file == 'screenshot2.png') {
+    if ($file == 'screenshot.png') {
       $slice = imagecreatetruecolor(150, 90);
       imagecopyresampled($slice, $target, 0, 0, $x, $y, 150, 90, $width, $height);
       \Drupal::configFactory()->getEditable('color.theme.' . $theme)

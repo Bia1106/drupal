@@ -58,7 +58,7 @@ class ColorTest extends MigrateSqlSourceTestBase {
       ],
       [
         'name' => 'color_bartik_screenshot',
-        'value' => ['public:://color/bartik-b69cfcec/screenshot2.png'],
+        'value' => ['public:://color/bartik-b69cfcec/screenshot.png'],
       ],
       [
         'name' => 'color_custom_stylesheets',
@@ -117,7 +117,7 @@ class ColorTest extends MigrateSqlSourceTestBase {
       ],
       [
         'name' => 'color_bartik_screenshot',
-        'value' => ['public:://color/bartik-b69cfcec/screenshot2.png'],
+        'value' => ['public:://color/bartik-b69cfcec/screenshot.png'],
       ],
       [
         'name' => 'color_custom_stylesheets',
