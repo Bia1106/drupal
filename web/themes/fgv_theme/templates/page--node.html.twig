@@ -53,7 +53,7 @@
 #}
 <body>
 	<!--menu desktop start-->
-	<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+	{# <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
 		<div class="desktop-only container-fluid">
 			<button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar5" style="">
 				<span class="navbar-toggler-icon"></span>
@@ -158,7 +158,9 @@
 				</div>
 			</div>
 		</div>
-	</nav>
+	</nav> #}
+  {{page.navigation_collapsible}}
+  {{page.navigation}}
 	<!--menu end-->
 	<div style="linear-gradient(to left, rgb(17, 161, 234), rgb(34, 68, 255));	background-position: top left, top left;	background-size: 100%, 100%;	background-repeat: repeat, repeat;" class="bg-primary">
 		<div class="carousel slide shadow-none carousel-fade" data-ride="carousel" id="carousel" data-interval="5000">
@@ -702,7 +704,15 @@
 		</div>
 	</div>
 	<!-- seção apenas no mobile end -->
-	{{ page.footer }}
+	<div class="d-block d-sm-none bg-info" style="">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"></div>
+			</div>
+		</div>
+	</div>
+{{page.footer}}
+
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

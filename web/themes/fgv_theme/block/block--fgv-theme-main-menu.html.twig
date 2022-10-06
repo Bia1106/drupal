@@ -1,0 +1,65 @@
+{#
+ESSE BLOCO É O HEADER COM OS MENUS, LOGO E ETC PARA TODAS AS PÁGINAS
+#}
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+<div class="desktop-only container-fluid">
+  <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar5" style="">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="collapse navbar-collapse" id="navbar5" href="{{item.link}}">
+    <img class="d-block img-fluid" src="{{ base_path ~ directory }}/images/logo-fgv.svg" height="30px">
+  </a>
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+<a class="btn navbar-btn ml-md-2 btn btn-yellow text-dark btn-warning" href="#">Área do Beneficiário</a>
+<div class="dropdown">
+  <button class="btn dropleft" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-search text-dark"></i>
+  </button>
+  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="">
+    <div class="input-group">
+      <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-warning btn-lg" type="button">
+          <i class="bi bi-search text-dark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="close-menu mobile-only" data-toggle="collapse" data-target="#navbar5" style="">
+  x
+</button>
+</div>
+<!-- menu desktop end-->
+<!--menu mobile start -->
+<div class="container mobile-only menu-mobile">
+<div class="d-flex flex-row w-100 align-items-center justify-content-between"><img class="d-block" src="{{ directory }}/images/logo-fgv.svg" height="50px">
+  <div class="text-center">
+    <button class="navbar-toggler navbar-toggler-right border-0 border-right" type="button" style="" onclick="document.getElementById('menu-body').classList.toggle('open')">
+      <i class="bi bi-list text-dark"></i>
+    </button>
+    <button class="navbar-toggler navbar-toggler-right border-0 mt-1" type="button" style="" data-target="#buscar-por" data-toggle="modal">
+      <i class="bi bi-search text-dark"></i>
+    </button>
+  </div>
+</div>
+<div class="menu" id="menu-body">
+  <div class="holder p-3">
+    <div>
+      <img class="img-fluid d-block mt-2 mb-4" src="{{ directory }}/images/logo-branca-mobile.png" width="180">
+      {% block contentMobile %}
+      {{ content }}
+    {% endblock %}
+    </div>
+  </div>
+  <div class="borda">
+    <button class="close-menu" onclick="document.getElementById('menu-body').classList.toggle('open')">
+      <i class="bi bi-x-circle"></i>
+    </button>
+  </div>
+</div>
+</div>
+</nav>
