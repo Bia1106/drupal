@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;400;700;900");
+@import url("https://fonts.googleapis.com/css?family=Exo:100;400;700;900");
 /*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
@@ -5164,7 +5164,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Exo", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.428571429;
@@ -5269,7 +5269,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Exo", sans-serif;;
+  font-family: "Exo", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.428571429;
@@ -5790,6 +5790,10 @@ header {
   @media (min-width: 768px) {
     header .navbar-nav {
       float: right; } }
+  header.opaque {
+    background-color: white !important;
+    transition: background-color 0.5s ease;
+    border-bottom: 1px solid #fff !important; }
   header .menu li {
     border-top: 0 solid transparent; }
     header .menu li > a {
@@ -5816,5 +5820,85 @@ header {
         content: '';
         border-top: solid 4px #d2001e;
         transform: scaleX(1); }
+
+.component-button {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .component-button .btn {
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16.25px; }
+  .component-button .button {
+    padding-right: 50px;
+    padding-left: 50px; }
+
+.btn-white {
+  color: white;
+  background-color: transparent;
+  border-color: white; }
+  .btn-white:focus, .btn-white.focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #bfbfbf; }
+  .btn-white:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #e0e0e0; }
+  .btn-white:active, .btn-white.active, .open > .btn-white.dropdown-toggle {
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    border-color: #e0e0e0; }
+    .btn-white:active:hover, .btn-white:active:focus, .btn-white:active.focus, .btn-white.active:hover, .btn-white.active:focus, .btn-white.active.focus, .open > .btn-white.dropdown-toggle:hover, .open > .btn-white.dropdown-toggle:focus, .open > .btn-white.dropdown-toggle.focus {
+      color: white;
+      background-color: rgba(0, 0, 0, 0);
+      border-color: #bfbfbf; }
+  .btn-white.disabled:hover, .btn-white.disabled:focus, .btn-white.disabled.focus, .btn-white[disabled]:hover, .btn-white[disabled]:focus, .btn-white[disabled].focus, fieldset[disabled] .btn-white:hover, fieldset[disabled] .btn-white:focus, fieldset[disabled] .btn-white.focus {
+    background-color: transparent;
+    border-color: white; }
+  .btn-white .badge {
+    color: transparent;
+    background-color: white; }
+  .btn-white.button {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 12px; }
+
+.btn-white-bigger {
+  color: black;
+  background-color: white;
+  border-color: white;
+  font-weight: 100;
+  font-size: 16.25px; }
+  .btn-white-bigger:focus, .btn-white-bigger.focus {
+    color: black;
+    background-color: #e6e6e6;
+    border-color: #bfbfbf; }
+  .btn-white-bigger:hover {
+    color: black;
+    background-color: #e6e6e6;
+    border-color: #e0e0e0; }
+  .btn-white-bigger:active, .btn-white-bigger.active, .open > .btn-white-bigger.dropdown-toggle {
+    color: black;
+    background-color: #e6e6e6;
+    background-image: none;
+    border-color: #e0e0e0; }
+    .btn-white-bigger:active:hover, .btn-white-bigger:active:focus, .btn-white-bigger:active.focus, .btn-white-bigger.active:hover, .btn-white-bigger.active:focus, .btn-white-bigger.active.focus, .open > .btn-white-bigger.dropdown-toggle:hover, .open > .btn-white-bigger.dropdown-toggle:focus, .open > .btn-white-bigger.dropdown-toggle.focus {
+      color: black;
+      background-color: #d4d4d4;
+      border-color: #bfbfbf; }
+  .btn-white-bigger.disabled:hover, .btn-white-bigger.disabled:focus, .btn-white-bigger.disabled.focus, .btn-white-bigger[disabled]:hover, .btn-white-bigger[disabled]:focus, .btn-white-bigger[disabled].focus, fieldset[disabled] .btn-white-bigger:hover, fieldset[disabled] .btn-white-bigger:focus, fieldset[disabled] .btn-white-bigger.focus {
+    background-color: white;
+    border-color: white; }
+  .btn-white-bigger .badge {
+    color: white;
+    background-color: black; }
+
+.button {
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGV PTR</title>
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="desktop-only container-fluid">
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar5" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="collapse navbar-collapse" id="navbar5" href="index.html">
+        <img class="d-block img-fluid" src="img/logo-fgv.svg" height="30px"></a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O Projeto</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Histórico do projeto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Governança</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Glossário</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Quem somos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Notícias</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Galeria de fotos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Galeria de vídeos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cursos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Publicações</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Transparência</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Agenda</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentos</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Documentos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Formulários</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Glossários</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Contato</a>
+        </li>
+      </ul>
+      <a class="btn navbar-btn ml-md-2 btn btn-yellow text-dark btn-warning" href="#">Área do Beneficiário</a>
+      <div class="dropdown">
+        <button class="btn dropleft" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-search text-dark"></i></button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="">
+          <div class="input-group">
+            <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning btn-lg" type="button"><i class="bi bi-search text-dark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="close-menu mobile-only" data-toggle="collapse" data-target="#navbar5" style=""> x </button>
+    </div>
+    <div class="container mobile-only menu-mobile">
+      <div class="d-flex flex-row w-100 align-items-center justify-content-between"><img class="d-block" src="img/logo-fgv.svg" height="50px">
+        <div class="text-center">
+          <button class="navbar-toggler navbar-toggler-right border-0 border-right" type="button" style="" onclick="document.getElementById('menu-body').classList.toggle('open')">
+            <i class="bi bi-list text-dark"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-right border-0 mt-1" type="button" style="" data-target="#buscar-por" data-toggle="modal">
+            <i class="bi bi-search text-dark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="menu" id="menu-body">
+        <div class="holder p-3">
+          <div>
+            <ul class="navbar-nav">
+              <img class="img-fluid d-block mt-2 mb-4" src="img/logo-branca-mobile.png" width="180">
+              <li class="nav-item text-dark py-1">
+                <a href="#" class="nav-link active text-white">Home</a>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O Projeto</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Histórico do projeto</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Governança</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Glossário</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Quem somos</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Notícias</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Galeria de fotos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Galeria de vídeos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Cursos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Publicações</a>
+                </div>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Transparência</a>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Agenda</a>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentos</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Documentos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Formulários</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Glossários</a>
+                </div>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="borda">
+          <button class="close-menu" onclick="document.getElementById('menu-body').classList.toggle('open')"> <i class="bi bi-x-circle"></i> </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5" style="	background-image: url(&quot;img/bg1.png&quot;);	background-position: top left;	background-size: cover;	background-repeat: no-repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-white">Transparência</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-nonept-3 py-3" style="">
+    <div class="container">
+      <div class="row my-3">
+        <div class="col-md-12">
+          <h2 class="text-dark text-center">PTR em números</h2>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-lg-5">
+          <div class="card border-0">
+            <div class="card-body py-2">
+              <div class="row d-flex align-items-center">
+                <div class="px-0 col-2 col-md-2 col-lg-2"><img class="img-fluid d-block" src="img/img-people.png"></div>
+                <div class="px-0 col-10 col-lg-10 col-md-10">
+                  <div class="row mx-1">
+                    <div class="col-lg-12 col-md-12" style="">
+                      <h1 class="text-dark mt-2">+ 105 mil</h1>
+                      <p>pessoas pagas por mês</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+          <div class="card border-0">
+            <div class="card-body py-2">
+              <div class="row d-flex align-items-center">
+                <div class="px-0 col-2 col-md-2 col-lg-2"><img class="img-fluid d-block" src="img/img-cash.png"></div>
+                <div class="px-0 col-10 col-lg-10 col-md-10">
+                  <div class="row mx-1">
+                    <div class="col-lg-12 col-md-12" style="">
+                      <h1 class="text-dark mt-2">+ 650 mil</h1>
+                      <p>pagos no total</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none bg-primary py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-white text-center">Fundo do PTR</h2>
+          <p class="text-center text-white">Aqui será exibido uma breve descrição sobre o Fundo</p>
+          <div class="row">
+            <div class="col-md-6 col-6 border-right">
+              <h2 class="text-white text-center">R$ 4,2 Bi</h2>
+              <p class="text-center text-white">recebidos em Outubro/2021</p>
+            </div>
+            <div class="col-md-6 col-6">
+              <h2 class="text-white text-center">R$ 3,9 Bi</h2>
+              <p class="text-center text-white">aplicados em renda fixa em conta da FGV na CEF</p>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-6 col-6 border-right">
+              <h2 class="text-white text-center">+ R$ 280M</h2>
+              <p class="text-center text-white">recebidos em Outubro/2021</p>
+            </div>
+            <div class="col-md-6 col-6">
+              <h2 class="text-white text-center">NOV 2025</h2>
+              <p class="text-center text-white">É a duração prevista para o término </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block bg-primary py-5" style="">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-7 col-6" style="">
+          <h2 class="text-white" id="proximas-paradas">Fundo do PTR</h2>
+          <h6 class="text-white">Aqui será exibido uma breve descrição sobre o Fundo </h6>
+        </div>
+        <div class="d-flex justify-content-end align-items-center col-md-5 col-6" style=""><img class="img-fluid d-block" src="img/img-cash2.png" width="150"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="border-bottom col-md-5 col-lg-5 col-6" style="">
+          <div class="row">
+            <div class="col-lg-6 col-md-7" style="">
+              <h2 class="text-white" id="proximas-paradas">R$ 4,2 Bi</h2>
+            </div>
+            <div class="col-md-6 col-lg-6" style="">
+              <h6 class="text-white mb-0">recebidos em</h6>
+              <h6 class="text-white mb-0">Outubro/2021</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-5 col-lg-5 border-bottom ml-2" style="">
+          <div class="row">
+            <div class="col-lg-6 col-md-7" style="">
+              <h2 class="text-white" id="proximas-paradas">R$ 3,9 Bi</h2>
+            </div>
+            <div class="col-lg-6 col-md-12" style="">
+              <h6 class="text-white mb-0">aplicados em renda fixa</h6>
+              <h6 class="text-white mb-0">em conta da FGV na CEF</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="border-bottom col-md-5 col-lg-5 col-6" style="">
+          <div class="row">
+            <div class="col-lg-6 col-md-7" style="">
+              <h2 class="text-white" id="proximas-paradas">R$ 4,2 Bi</h2>
+            </div>
+            <div class="col-md-6 col-lg-6" style="">
+              <h6 class="text-white mb-0">recebidos em</h6>
+              <h6 class="text-white mb-0">Outubro/2021</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-5 col-lg-5 border-bottom ml-2" style="">
+          <div class="row">
+            <div class="col-lg-6 col-md-7" style="">
+              <h2 class="text-white" id="proximas-paradas">R$ 3,9 Bi</h2>
+            </div>
+            <div class="col-lg-6 col-md-12" style="">
+              <h6 class="text-white mb-0">aplicados em renda fixa</h6>
+              <h6 class="text-white mb-0">em conta da FGV na CEF</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-nonept-3 pt-3 pb-5 bg-light" style="">
+    <div class="container">
+      <div class="row my-3">
+        <div class="col-md-12">
+          <h2 class="text-dark text-center">Pagamentos (Mapa)</h2>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12"><img class="img-fluid d-block mx-auto" src="img/mapa.png"></div>
+      </div>
+    </div>
+  </div>
+  <div class="py-4 text-center">
+    <div class="container">
+      <div class="row my-3">
+        <div class="col-md-12">
+          <h2 class="text-dark text-center">Atendimento</h2>
+          <p>Aqui será exibido uma breve descrição sobre o Fundo</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <div class="card">
+            <div class="card-body bg-light"> <img class="img-fluid d-block mb-3 mx-auto" src="img/icon-phone.png" width="60">
+              <h4 class="text-dark text-center">+35 mil</h4>
+              <p class="text-dark">telefonemas atendidos</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card">
+            <div class="card-body bg-light"> <img class="img-fluid d-block mb-3 mx-auto" src="img/icon-email.png" width="80">
+              <h4 class="text-dark text-center">+13 mil</h4>
+              <p class="text-dark">e-mails respondidos</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card bg-light px-4">
+            <div class="card-body py-2">
+              <img class="img-fluid d-block mb-3 mx-auto" src="img/icon-sms.png" width="47
+40" style="">
+              <h4 class="text-dark text-center">+300 mil</h4>
+              <p class="text-dark text-center">SMS enviados</p>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6">
+          <div class="card bg-light px-4">
+            <div class="card-body py-2">
+              <img class="img-fluid d-block mb-3 mx-auto" src="img/icon-windows.png" width="60">
+              <h4 class="text-dark text-center">+260 mil</h4>
+              <p class="text-dark text-center">acessos/ mês no portal</p>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none py-4" style="background-image: linear-gradient(rgb(12, 99, 170), rgb(12, 99, 170)); background-position: left top; background-size: 100%; background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 my-2" style="">
+          <h3 class="text-white text-center">Se você tem alguma dúvida</h3>
+          <h2 class="text-white text-center">Estamos aqui para te ajudar</h2>
+          <div class="row">
+            <div class="col-md-12 d-flex flex-row justify-content-center mt-3"><a class="btn btn-yellow py-2 text-dark" href="agenda.html">Ver toda agenda completa</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none py-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-white text-center mb-3"><a href="#">Termos de uso</a></h5>
+          <h5 class="text-white text-center mb-3"><a href="#">Política de privacidade</a></h5>
+          <h5 class="text-white text-center mb-3"><a href="#">Quem Somos</a></h5>
+          <h5 class="text-white text-center"><a href="#">Contato</a></h5>
+        </div>
+        <div class="col-md-4 d-flex flex-row justify-content-center pt-2"><img class="img-fluid d-block" src="img/logo-fgv.svg" width="200"></div>
+        <div class="col-md-4">
+          <h6 class="text-text-color text-center mt-2">Copyright © FGV PTR</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none bg-info" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-4">
+    <div class="container">
+      <div class="row mx-auto">
+        <div class="text-center bg-primary col-lg-8 col-12 p-4">
+          <h4 class="text-left text-white">Se você ainda tem alguma dúvida </h4>
+          <h2 class="text-left text-white">Estamos aqui para te ajudar </h2>
+        </div>
+        <div class="text-center bg-primary col-lg-4 d-flex flex-row justify-content-center align-items-center col-12 p-4"><a class="btn btn-yellow py-2 text-dark" href="#">Entre em contato</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-3 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-5" style=""><img class="d-block img-fluid" src="img/logo-fgv.svg" width="180"></div>
+        <div class="col-md-6 col-lg-7" style="">
+          <ul class="nav d-flex justify-content-end">
+            <li class="nav-item"> <a class="nav-link active" href="#">Termos de uso</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Política de privacidade</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Quem Somos</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Contato</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-3 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center d-md-flex align-items-center justify-content-between" style="">
+          <p class="mb-0 py-1">Copyright © FGV PTR</p>
+        </div>
+        <div class="col-md-6 d-flex flex-row justify-content-end" style=""><a class="btn btn-link text-muted" href="#" style="color:#0976b4" target="_blank">Topo do site<i class="bi bi-caret-up-fill ml-2"></i></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="buscar-por">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning btn-lg" type="button"><i class="bi bi-search text-dark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

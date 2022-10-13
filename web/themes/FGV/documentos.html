@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FGV PTR</title>
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" type="text/css">
+  <link rel="stylesheet" href="theme.css" type="text/css">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="desktop-only container-fluid">
+      <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar5" style="">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="collapse navbar-collapse" id="navbar5" href="index.html">
+        <img class="d-block img-fluid" src="img/logo-fgv.svg" height="30px"></a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O Projeto</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Histórico do projeto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Governança</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Glossário</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Quem somos</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Notícias</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Galeria de fotos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Galeria de vídeos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cursos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Publicações</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Transparência</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Agenda</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-text-color" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentos</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Documentos</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Formulários</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Glossários</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-text-color">Contato</a>
+        </li>
+      </ul>
+      <a class="btn navbar-btn ml-md-2 btn btn-yellow text-dark btn-warning py-2" href="#">Área do Beneficiário</a>
+      <div class="dropdown">
+        <button class="btn dropleft" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-search text-dark"></i></button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="">
+          <div class="input-group">
+            <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning btn-lg" type="button"><i class="bi bi-search text-dark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="close-menu mobile-only" data-toggle="collapse" data-target="#navbar5" style=""> x </button>
+    </div>
+    <div class="container mobile-only menu-mobile">
+      <div class="d-flex flex-row w-100 align-items-center justify-content-between"><img class="d-block" src="img/logo-fgv.svg" height="50px">
+        <div class="text-center">
+          <button class="navbar-toggler navbar-toggler-right border-0 border-right" type="button" style="" onclick="document.getElementById('menu-body').classList.toggle('open')">
+            <i class="bi bi-list text-dark"></i>
+          </button>
+          <button class="navbar-toggler navbar-toggler-right border-0 mt-1" type="button" style="" data-target="#buscar-por" data-toggle="modal">
+            <i class="bi bi-search text-dark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="menu" id="menu-body">
+        <div class="holder p-3">
+          <div>
+            <ul class="navbar-nav">
+              <img class="img-fluid d-block mt-2 mb-4" src="img/logo-branca-mobile.png" width="180">
+              <li class="nav-item text-dark py-1">
+                <a href="#" class="nav-link active text-white">Home</a>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">O Projeto</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Histórico do projeto</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Governança</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Glossário</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Quem somos</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notícias</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Notícias</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Galeria de fotos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Galeria de vídeos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Cursos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Publicações</a>
+                </div>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Transparência</a>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Agenda</a>
+              </li>
+              <li class="nav-item dropdown py-1">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Documentos</a>
+                <div class="dropdown-menu" style="background-color:#002D4D">
+                  <a class="dropdown-item text-white" href="#">Documentos</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Formulários</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item text-white" href="#">Glossários</a>
+                </div>
+              </li>
+              <li class="nav-item py-1">
+                <a href="#" class="nav-link active text-white">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="borda">
+          <button class="close-menu" onclick="document.getElementById('menu-body').classList.toggle('open')"> <i class="bi bi-x-circle"></i> </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="py-5" style="	background-image: url(&quot;img/bg1.png&quot;);	background-position: top left;	background-size: cover;	background-repeat: no-repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-white">Documentos</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-nonept-3 py-4 bg-light" style="">
+    <div class="container">
+      <div class="row mx-0 py-3 px-3 bg-white">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 col-lg-5">
+              <div class="form-group"><label>Pesquisar</label><input type="text" class="form-control py-3" placeholder="Palavra-chave" aria-label="Recipient's username" aria-describedby="basic-addon2"></div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="form-group"><label>Tipo de documento</label>
+                <input type="text" class="form-control py-3" aria-label="Recipient's username" aria-describedby="basic-addon2"></div>
+            </div>
+            <div class="col-md-4 col-lg-3 d-flex flex-row justify-content-center align-items-center"><button class="btn btn-yellow text-dark mt-2 px-5 py-2" type="button">Buscar</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center mt-4"><i>Exibindo 297 documentos</i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-light py-3">
+    <div class="container">
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto mb-2">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body py-2 d-flex align-items-center">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <p>
+                      </p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body py-2">
+              <div class="row">
+                <div class="col-md-12 px-0">
+                  <div class="row mx-1">
+                    <div class="col-md-12 col-lg-12" style="">
+                      <h6 class="mb-0 my-2 text-dark"><i class="bi bi-calendar3 mr-2 text-dark"></i><span style="font-weight: normal;"> 20 OUT 2022</span></h6>
+                      <h5 class="text-dark mt-2">Título de exemplo de documento</h5>
+                      <p>Breve descrição caso haja donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <h6 class="mb-0 my-2 text-primary" style=""><i class="bi bi-file-earmark-pdf mr-2 text-primary"></i><span style="font-weight: normal;"><i>PDF Download</i></span></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex flex-row justify-content-center">
+          <ul class="pagination">
+            <li class="page-item"> <a class="page-link" href="#"> <span>«</span></a> </li>
+            <li class="page-item active"> <a class="page-link" href="#">1</a> </li>
+            <li class="page-item"> <a class="page-link" href="#">2</a> </li>
+            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+            <li class="page-item"> <a class="page-link" href="#">4</a> </li>
+            <li class="page-item"> <a class="page-link" href="#"> <span>»</span></a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none py-4" style="background-image: linear-gradient(rgb(12, 99, 170), rgb(12, 99, 170)); background-position: left top; background-size: 100%; background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 my-2" style="">
+          <h3 class="text-white text-center">Se você tem alguma dúvida</h3>
+          <h2 class="text-white text-center">Estamos aqui para te ajudar</h2>
+          <div class="row">
+            <div class="col-md-12 d-flex flex-row justify-content-center mt-3"><a class="btn btn-yellow py-2 text-dark" href="agenda.html">Ver toda agenda completa</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none py-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5 class="text-white text-center mb-3"><a href="#">Termos de uso</a></h5>
+          <h5 class="text-white text-center mb-3"><a href="#">Política de privacidade</a></h5>
+          <h5 class="text-white text-center mb-3"><a href="#">Quem Somos</a></h5>
+          <h5 class="text-white text-center"><a href="#">Contato</a></h5>
+        </div>
+        <div class="col-md-4 d-flex flex-row justify-content-center pt-2"><img class="img-fluid d-block" src="img/logo-fgv.svg" width="200"></div>
+        <div class="col-md-4">
+          <h6 class="text-text-color text-center mt-2">Copyright © FGV PTR</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-block d-sm-none bg-info" style="">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-4 bg-light">
+    <div class="container">
+      <div class="row mx-auto">
+        <div class="text-center bg-primary col-lg-8 col-12 p-4">
+          <h4 class="text-left text-white">Se você ainda tem alguma dúvida </h4>
+          <h2 class="text-left text-white">Estamos aqui para te ajudar </h2>
+        </div>
+        <div class="text-center bg-primary col-lg-4 d-flex flex-row justify-content-center align-items-center col-12 p-4"><a class="btn btn-yellow py-2 text-dark" href="#">Entre em contato</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-3 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-5" style=""><img class="d-block img-fluid" src="img/logo-fgv.svg" width="180"></div>
+        <div class="col-md-6 col-lg-7" style="">
+          <ul class="nav d-flex justify-content-end">
+            <li class="nav-item"> <a class="nav-link active" href="#">Termos de uso</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#" contenteditable="true">Política de privacidade</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Quem Somos</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="#">Contato</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-none d-sm-block py-3 border-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center d-md-flex align-items-center justify-content-between" style="">
+          <p class="mb-0 py-1">Copyright © FGV PTR</p>
+        </div>
+        <div class="col-md-6 d-flex flex-row justify-content-end" style=""><a class="btn btn-link text-muted" href="#" style="color:#0976b4" target="_blank">Topo do site<i class="bi bi-caret-up-fill ml-2"></i></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="buscar-por">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control input-text" placeholder="Buscar por" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-warning btn-lg" type="button"><i class="bi bi-search text-dark"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

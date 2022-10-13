@@ -159,7 +159,6 @@
 			</div>
 		</div>
 	</nav> #}
-  {{page.navigation_collapsible}}
   {{page.navigation}}
 	<!--menu end-->
 	<div style="linear-gradient(to left, rgb(17, 161, 234), rgb(34, 68, 255));	background-position: top left, top left;	background-size: 100%, 100%;	background-repeat: repeat, repeat;" class="bg-primary">
@@ -197,133 +196,23 @@
 				<span class="sr-only">Previous</span>
 			</a>
 			<a class="carousel-control-next p-4" href="#carousel" role="button" data-slide="next" style="	background-image: linear-gradient(to bottom, rgba(77, 78, 86, 0.5), rgba(77, 78, 86, 0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
-				<span class="bi bi-arrow-right "></span>
+				<i class="fa-solid fa-arrow-right"></i>
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
 	</div>
-	<div class="d-none d-sm-block pt-5" style="">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7 col-6">
-					<h2 class="text-dark" id="proximas-paradas">
-						<span style="font-weight: normal;">Últimas notícias</span>
-					</h2>
-				</div>
-				<div class="d-flex justify-content-end align-items-center col-md-5 col-6" style="">
-					<a class="btn btn-yellow py-2 btn-warning text-dark" href="agenda.html">Ver todas notícias</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="d-block d-sm-none pt-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="text-dark text-center mb-0" id="proximas-paradas">Últimas notícias</h2>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="d-block d-sm-nonept-3 py-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 col-lg-6 mt-2" style="">
-					<div class="card">
-						<img class="card-img-top" src="{{ base_path ~ directory }}/images/foto1-noticia.png" alt="Card image cap">
-						<div class="card-body">
-							<h6 class="mb-0 my-2 text-dark">
-								<i class="bi bi-calendar3 mr-2 text-primary"></i>
-								<span style="font-weight: normal;">
-									20 OUT 2022</span>
-							</h6>
-							<h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
-						</div>
-					</div>
-				</div>
-				<div class="d-flex flex-column justify-content-between align-items-stretch col-lg-6">
-					<div class="card mt-2">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-12 px-0 col-12">
-									<div class="row mx-1">
-										<div class="col-8 col-lg-9 col-md-9" style="">
-											<h6 class="mb-0 my-2 text-dark">
-												<i class="bi bi-calendar3 mr-2 text-primary"></i>
-												<span style="font-weight: normal;">
-													20 OUT 2022</span>
-											</h6>
-											<h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
-										</div>
-										<div class="px-0 col-4 col-lg-3 col-md-3"><img class="img-fluid d-block float-right" src="{{ base_path ~ directory }}/images/foto1.png"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card mt-2">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-12 px-0 col-12">
-									<div class="row mx-1">
-										<div class="col-8 col-lg-9 col-md-9" style="">
-											<h6 class="mb-0 my-2 text-dark">
-												<i class="bi bi-calendar3 mr-2 text-primary"></i>
-												<span style="font-weight: normal;">
-													20 OUT 2022</span>
-											</h6>
-											<h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
-										</div>
-										<div class="px-0 col-4 col-lg-3 col-md-3"><img class="img-fluid d-block float-right" src="{{ base_path ~ directory }}/images/foto1.png"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card mt-2">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-md-12 px-0 col-12">
-									<div class="row mx-1">
-										<div class="col-8 col-lg-9 col-md-9" style="">
-											<h6 class="mb-0 my-2 text-dark">
-												<i class="bi bi-calendar3 mr-2 text-primary"></i>
-												<span style="font-weight: normal;">
-													20 OUT 2022</span>
-											</h6>
-											<h5 class="text-dark">Aqui será exibido o título da notícia para gerar entendimento ao público.</h5>
-										</div>
-										<div class="px-0 col-4 col-lg-3 col-md-3"><img class="img-fluid d-block float-right" src="{{ base_path ~ directory }}/images/foto1.png"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- seção apenas no mobile -->
-	<div class="d-block d-sm-none mb-4">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 justify-content-center align-items-center flex-row d-flex">
-					<a class="btn btn-yellow py-2" href="agenda.html">Ver todas notícias</a>
-				</div>
-			</div>
-		</div>
-	</div>
+  {{page.content}}
 	<!-- seção apenas no mobile -->
 	<div class="d-none d-sm-block pt-5 bg-light">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7 col-6" style="">
 					<h2 class="text-dark">
-						<span style="font-weight: normal;">Últimas notícias</span>
+						<span style="font-weight: normal;">Agenda</span>
 					</h2>
 				</div>
 				<div class="d-flex justify-content-end align-items-center col-md-5 col-6" style="">
-					<a class="btn btn-yellow py-2 btn-warning text-dark" href="agenda.html">Ver agenda completa</a>
+					<a class="btn btn-yellow py-2 btn-warning text-dark" href="/drupal_project/web/en/agenda">Ver agenda completa</a>
 				</div>
 			</div>
 		</div>
@@ -608,7 +497,7 @@
 					</h2>
 				</div>
 				<div class="d-flex justify-content-end align-items-center col-md-5 col-6">
-					<a class="btn btn-yellow py-2 btn-warning text-dark" href="agenda.html">Acessar transparência</a>
+					<a class="btn btn-yellow py-2 btn-warning text-dark" href="/drupal_project/web/en/transparencia">Acessar transparência</a>
 				</div>
 			</div>
 			<div class="row mx-auto">

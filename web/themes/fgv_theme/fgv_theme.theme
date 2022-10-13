@@ -1,5 +1,6 @@
 <?php
-
+use Drupal\node\Entity\Node;
+use Drupal\field\FieldConfigInterface;
 /**
  * @file
  * Bootstrap sub-theme.
@@ -10,3 +11,32 @@ function fgv_theme_preprocess(&$variables, $hook)
 {
     $variables['base_path'] = base_path();
 }
+
+function contentTypeFields($contentType) {
+  $entityManager = Drupal::service('entity_type.manager');
+  $fields = [];
+
+  if(!empty($contentType)) {
+      $fields = array_filter(
+          $entityManager->getFieldDefinitions('node', $contentType),
+              function ($field_definition) {
+                 return
+                     $field_definition instanceof FieldConfigInterface;
+              }
+      );
+  }
+
+  return $fields;
+}
+
+// $nodes = Node::loadMultiple($nids);
+
+// // Replace your content type machine name here.
+// $fields = contentTypeFields('block_1');
+
+// $block_1['title'] = $node->get('title')->value;
+// foreach($fields as $fieldID => $field){
+//     $ticket[$fieldID] = $node->get($fieldID)->getValue();
+// }
+
+// print_r($block_1);

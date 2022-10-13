@@ -1,0 +1,65 @@
+<body>
+  {{page.navigation}}
+  <div class="py-5" style="	background-image: linear-gradient(to bottom, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)), url(&quot;{{ base_path ~ directory }}/images/banner5.png&quot;);	background-position: top left, center;	background-size: 100%, cover;	background-repeat: repeat, no-repeat;">
+    <div class="container">
+      <div class="row" style="">
+        <div class="col-md-12 col-lg-6 col-10">
+          <h2 class="text-white">Aqui será exibido o título da notícia para gerar entendimento ao público sobre o assunto</h2>
+        </div>
+      </div>
+      <div class="row" style="">
+        <div class="col-md-12 col-lg-6 border-top">
+          <div class="row">
+            <div class="col-md-6 col-6">
+              <h6 class="mb-0 my-2 text-white"><i class="bi bi-calendar3 mr-2"></i> 20 OUT 2022</h6>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end col-6">
+              <h6 class="mb-0 my-2 text-white"> 20 OUT 2022<i class="bi bi-share ml-2"></i></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+  <div{{ content_attributes.addClass('content') }}>
+    {{ content }}
+  </div>
+
+</article>
+  {{page.footer}}
+  <!--script audio start -->
+  <script style="">
+    // Play audio & mostra pause btn
+    var playShow = function() {
+      audionoticia.play();
+      playBtn.style.display = "none";
+      pauseBtn.style.display = "inline-block";
+    };
+    // Pause audio & mostra play btn
+    var pauseShow = function() {
+      audionoticia.pause();
+      playBtn.style.display = "inline-block";
+      pauseBtn.style.display = "none";
+    };
+  </script>
+  <!--script audio end -->
+</body>
