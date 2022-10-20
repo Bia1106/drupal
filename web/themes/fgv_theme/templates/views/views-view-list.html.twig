@@ -18,38 +18,23 @@
  * @ingroup themeable
  */
 #}
-<div class="d-none d-sm-block pt-5" style="">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-7 col-6">
-				<h2 class="text-dark" id="proximas-paradas">
-					<span style="font-weight: normal;">Últimas notícias</span>
-				</h2>
-			</div>
-			<div class="d-flex justify-content-end align-items-center col-md-5 col-6" style="">
-				<a class="btn btn-yellow py-2 btn-warning text-dark" href="/drupal_project/web/en/noticias">Ver todas notícias</a>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="d-block d-sm-none pt-4">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="text-dark text-center mb-0" id="proximas-paradas">Últimas notícias</h2>
-			</div>
-		</div>
-	</div>
-</div>
-{% for row in rows %}
-{{- row.content -}}
-{% endfor %}
-<div class="d-block d-sm-none mb-4">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 justify-content-center align-items-center flex-row d-flex">
-				<a class="btn btn-yellow py-2" href="agenda.html">Ver todas notícias</a>
-			</div>
-		</div>
-	</div>
-</div>
+{% if attributes -%}
+  <div{{ attributes }}>
+{% endif %}
+  {% if title %}
+    <h3>{{ title }}</h3>
+  {% endif %}
+
+  <{{ list.type }}{{ list.attributes }}>
+
+    {% for row in rows %}
+      <li{{ row.attributes }}>
+        {{- row.content -}}
+      </li>
+    {% endfor %}
+
+  </{{ list.type }}>
+
+{% if attributes -%}
+  </div>
+{% endif %}

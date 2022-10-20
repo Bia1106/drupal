@@ -1,0 +1,9 @@
+name: Region In Content Templates
+type: module
+description: "Provides the ability to print regions (the building block of Drupal site building— where blocks are placed) within content (node) templates."
+package: "Theme"
+core_version_requirement: ^8.8.0 || ^9.0
+# Information added by Drupal.org packaging script on 2022-03-28
+version: '8.x-1.0'
+project: 'regionincontent'
+datestamp: 1648473266

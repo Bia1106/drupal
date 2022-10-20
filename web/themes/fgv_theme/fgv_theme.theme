@@ -1,6 +1,9 @@
 <?php
-use Drupal\node\Entity\Node;
+
 use Drupal\field\FieldConfigInterface;
+use Drupal\node\NodeInterface;
+use \Drupal\block\Entity\Block;
+
 /**
  * @file
  * Bootstrap sub-theme.
@@ -9,34 +12,76 @@ use Drupal\field\FieldConfigInterface;
  */
 function fgv_theme_preprocess(&$variables, $hook)
 {
-    $variables['base_path'] = base_path();
+  $variables['base_path'] = base_path();
 }
 
-function contentTypeFields($contentType) {
-  $entityManager = Drupal::service('entity_type.manager');
-  $fields = [];
+function fgv_theme_preprocess_node(&$variables)
+{
+  // Allowed view modes
+  $view_mode = $variables['view_mode']; // Retrieve view mode
+  $allowed_view_modes = ['full']; // Array of allowed view modes (for performance so as to not execute on unneeded nodes)
 
-  if(!empty($contentType)) {
-      $fields = array_filter(
-          $entityManager->getFieldDefinitions('node', $contentType),
-              function ($field_definition) {
-                 return
-                     $field_definition instanceof FieldConfigInterface;
-              }
-      );
+  // If view mode is in allowed view modes list, pass to THEME_add_regions_to_node()
+  if (in_array($view_mode, $allowed_view_modes)) {
+    // Allowed regions (for performance so as to not execute for unneeded region)
+    $allowed_regions = ['sidebar_second'];
+    fgv_theme_add_regions_to_node($allowed_regions, $variables);
   }
-
-  return $fields;
 }
 
-// $nodes = Node::loadMultiple($nids);
+/**
+ * THEME_add_regions_to_node
+ */
 
-// // Replace your content type machine name here.
-// $fields = contentTypeFields('block_1');
+function fgv_theme_add_regions_to_node($allowed_regions, &$variables)
+{
+  // Retrieve active theme
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
 
-// $block_1['title'] = $node->get('title')->value;
-// foreach($fields as $fieldID => $field){
-//     $ticket[$fieldID] = $node->get($fieldID)->getValue();
-// }
+  // Retrieve theme regions
+  $available_regions = system_region_list($theme, 'REGIONS_ALL');
 
-// print_r($block_1);
+  // Validate allowed regions with available regions
+  $regions = array_intersect(array_keys($available_regions), $allowed_regions);
+
+  // For each region
+  foreach ($regions as $key => $region) {
+
+    // Load region blocks
+    $blocks = \Drupal::entityTypeManager()
+      ->getStorage('block')
+      ->loadByProperties(array('theme' => $theme, 'region' => $region));
+
+    // Sort ‘em
+    uasort($blocks, 'Drupal\block\Entity\Block::sort');
+
+    // Capture viewable blocks and their settings to $build
+    $build = array();
+    foreach ($blocks as $key => $block) {
+      if ($block->access('view')) {
+        $block = Block::load($key);
+        $block_content = \Drupal::entityTypeManager()
+          ->getViewBuilder('block')
+          ->view($block);
+        $build[$key] = $block_content;
+      }
+    }
+
+    // Add build to region
+    $variables[$region] = $build;
+  }
+}
+
+ /**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function views_theme_suggestions_views_view(array $variables) {
+    $suggestions = [];
+    $view = $variables['view'];
+
+    $suggestions[] = 'views_view__' . $view->id();
+    $suggestions[] = 'views_view__' . $view->current_display;
+    $suggestions[] = 'views_view__' . $view->id() . '__' . $view->current_display;
+
+    return $suggestions;
+  }

@@ -1,0 +1,5 @@
+regionincontent.admin:
+  title: 'Region in Content settings'
+  description: 'Configuration for Region in content.'
+  parent: system.admin_config_ui
+  route_name: regionincontent.admin_settings_form
