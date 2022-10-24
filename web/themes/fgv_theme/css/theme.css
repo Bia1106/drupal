@@ -7654,3 +7654,13 @@ h6 {
   border-right-width: 0px;
   border-bottom-width: 0px;
   border-left-width: 0px; }
+
+.flex-caption{
+  position: absolute;
+  bottom: 500px;
+  left: 500px;
+  right: 0;
+  /* background: #00000052; */
+  color: #fff;
+  font-size: x-large;
+}

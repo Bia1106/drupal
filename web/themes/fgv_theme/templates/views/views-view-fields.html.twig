@@ -31,7 +31,7 @@
  * @ingroup themeable
  */
 #}
-{# {% for field in fields -%}
+{% for field in fields -%}
   {{ field.separator }}
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
@@ -51,13 +51,13 @@
   {%- if field.wrapper_element -%}
     </{{ field.wrapper_element }}>
   {%- endif %}
-{%- endfor %} #}
+{%- endfor %}
 
-<div class="d-block d-sm-nonept-3 py-4">
+{# <div class="d-block d-sm-nonept-3 py-4">
 <div class="container">
-<div class="row">
+<div class="row"> #}
 {# {% if fields|first %} #}
-    <div class="col-12 col-lg-6 mt-2" style="">
+    {# <div class="col-12 col-lg-6 mt-2" style="">
       <div class="card">
         {{ fields.field_image.content }}
         <div class="card-body">
@@ -68,7 +68,7 @@
           <h5 class="text-dark">{{fields.title.content}}</h5>
         </div>
       </div>
-    </div>
+    </div> #}
 {# {% else %}
     <div class="d-flex flex-column justify-content-between align-items-stretch col-lg-6">
     {% for field in fields %}
@@ -90,6 +90,6 @@
     {% endfor %}
     </div>
     {% endif %} #}
-  </div>
+  {# </div>
 </div>
-</div>
+</div> #}

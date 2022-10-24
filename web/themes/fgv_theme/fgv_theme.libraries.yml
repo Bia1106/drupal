@@ -22,3 +22,4 @@ framework:
 # Uncomment for SASS source JavaScript files.
   js:
    javascript/galeria.js: {}
+  #  bootstrap/js/carousel.js: {}

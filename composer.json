@@ -33,6 +33,7 @@
         "drupal/fontawesome": "^2.23",
         "drupal/jquery_ui": "^1.4",
         "drupal/material_icons": "^1.0",
+        "drupal/modal_page": "^4.1",
         "drupal/module_filter": "^3.2",
         "drupal/paragraphs": "^1.15",
         "drupal/pathauto": "^1.11",
@@ -41,6 +42,7 @@
         "drupal/slick": "^2.6",
         "drupal/soundcloudfield": "^2.0",
         "drupal/token": "^1.11",
+        "drupal/twig_tweak": "^3.2",
         "drupal/views_bootstrap": "^5.4",
         "drupal/views_layout": "^1.2",
         "drush/drush": "^11.1"
